@@ -11,52 +11,56 @@
 </head>
 <body>
 
-<div class="container border border-1 mt-4">
+<div class="container border border-1 mt-4 mb-4 gx-0">
  
-    <nav class="navbar bg-light p-2 border border-bottom-1 no-gutters">
-        <div class="container">
-          <a class="navbar-brand" href="#">Payment for example</a>
+    
+        <div class="container-fluid bg-light p-2 gx-0 fw-bold fs-3 border-bottom">
+          <h1 class="navbar-brand ms-2">Payment form example</h1>
         </div>
-    </nav>
+    
  
- <div class="alert alert-danger mt-4 ms-3 me-3 p-0 d-flex" role="alert">
-    <p class="font-weight-bold align-items-center ms-3">Some fields are missing</p>
+ <div class="alert alert-danger mt-4 ms-3 me-3 p-3 fw-semibold d-flex" role="alert">
+    <span class="ms-2  align-baseline">Some fields are missing</span>
  </div>
 
  <form>
-    <div class="row d-flex align-items-between justify-content-between">
-        <div class="col-6 ms-3">
-        <label for="cardNumber" class="form-label">Card #</label>
+    <div class="row">
+        <div class="col-6 px-4">
+        <label for="cardNumber" class="form-label fw-semibold">Card #</label>
         <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXX">
         </div>
-        <div class="col-2">
-            <label for="CVC" class="form-label">CVC #</label>
+        <div class="col-3 px-4">
+            <label for="CVC" class="form-label fw-semibold">CVC #</label>
             <input type="text" class="form-control" id="CVC" placeholder="000">
         </div>
-            <div class="col-2">
-                <label for="Amount" class="form-label">Amount</label>
-                <input type="text" class="form-control" id="Amount" placeholder="Amount">
+            <div class="col-3 px-4">
+                <label for="Amount" class="form-label fw-semibold">Amount</label>
+                <div class="input-group">
+                    <span class="input-text fw-bolder">$</span>
+                    <input type="text" class="form-control" id="Amount" placeholder="Amount">
+                    
+                  </div>
             </div>
     </div>
 
-    <div class="row d-flex justify-content-between">
-        <div class="col-5 ms-3">
-            <label for="firstName" class="form-label mt-3">First Name</label>
+    <div class="row">
+        <div class="col-6 px-4">
+            <label for="firstName" class="form-label mt-3 fw-semibold">First Name</label>
             <input type="text" class="form-control" id="firstName">
         </div>
-        <div class="col-5">
-            <label for="lastName" class="form-label mt-3">Last Name</label>
+        <div class="col-6 px-4">
+            <label for="lastName" class="form-label mt-3 fw-semibold">Last Name</label>
             <input type="text" class="form-control" id="lastName">
         </div>
     </div>
 
-    <div class="row d-flex justify-content-between">
-        <div class="col-6 ms-3">
-            <label for="cityfirstName" class="form-label mt-3">City</label>
+    <div class="row">
+        <div class="col-6 px-4">
+            <label for="cityfirstName" class="form-label mt-3 fw-semibold">City</label>
             <input type="text" class="form-control" id="city">
         </div>
-        <div class="col-2">
-            <label for="state" class="form-label mt-3">State</label>
+        <div class="col-3 px-4">
+            <label for="state" class="form-label mt-3 fw-semibold">State</label>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Pick a state</option>
                 <option value="1">Barcelona</option>
@@ -64,18 +68,18 @@
                 <option value="3">Paris</option>
               </select>
         </div>
-        <div class="col-2">
-            <label for="postalCode" class="form-label mt-3">Postal Code</label>
+        <div class="col-3 px-4">
+            <label for="postalCode" class="form-label mt-3 fw-semibold">Postal Code</label>
             <input type="text" class="form-control" id="postalCode">
         </div>
     </div>
 
     <div class="row d-flex justify-content-between">
-        <div class="col-5 ms-3">
-         <label for="weAccept" class="form-label mt-3">We accept:</label>
+        <div class="col-6 px-4 w-25">
+         <label for="weAccept" class="form-label mt-3 fw-semibold">We accept:</label>
          
 
-         <div class="input-group  bg-secondary justify-content-between p-3">
+         <div class="input-group  bg-secondary justify-content-between p-3 rounded">
 
             <input type="radio" id="mastercard" name="payment-method" value="mastercard">
             <i class="fa-brands fa-cc-mastercard"></i>
@@ -92,35 +96,23 @@
             </div>
         </div>
       
-        <div class="col-5 mt-3">
-            <label for="floatingTextarea">Message</label>
-            <textarea class="form-control mt-2" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Add any notes here.</label>
+        <div class="col-6 px-4">
+            <label for="floatingTextarea" class="fw-semibold mt-3">Message</label>
+            <textarea class="form-control mt-2" style="height: 100px;" id="floatingTextarea"></textarea>
+            <span class="text-muted fw-semibold small-text " >Add any notes here.</span>
         </div>
 
     </div>
 
-        <nav class="navbar bg-light p-2 border border-bottom-1 mt-5">
-            <div class="container justify-content-end">
-                <button type="button" class="btn btn-secondary me-1">Cancel</button>
-                <button type="button" class="btn btn-primary">Send</button>
+        
+            <div class="container d-flex justify-content-end bg-light border-top mt-5 p-3">
+                <input type="submit" class="btn btn-secondary me-1" value="Cancel"/>
+                <input type="submit" class="btn btn-primary" value="Send"/>
             </div>
-        </nav>
-
-
-
-
-
-   
-
-
-
-
-
-
-
+       
  </form>
-
 </div>
+
+</div> 
 </body>
 </html>
