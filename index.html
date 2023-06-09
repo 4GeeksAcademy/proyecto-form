@@ -27,17 +27,17 @@
     <div class="row">
         <div class="col-6 px-4">
         <label for="cardNumber" class="form-label fw-semibold">Card #</label>
-        <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXX">
+        <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXXXX" required>
         </div>
         <div class="col-3 px-4">
             <label for="CVC" class="form-label fw-semibold">CVC #</label>
-            <input type="text" class="form-control" id="CVC" placeholder="000">
+            <input type="text" class="form-control" id="CVC" name="CVC" placeholder="000" required>
         </div>
             <div class="col-3 px-4">
                 <label for="Amount" class="form-label fw-semibold">Amount</label>
                 <div class="input-group">
                     <span class="input-text fw-bolder">$</span>
-                    <input type="text" class="form-control" id="Amount" placeholder="Amount">
+                    <input type="number" class="form-control" id="Amount" name="Amount" placeholder="Amount" required>
                     
                   </div>
             </div>
@@ -46,73 +46,15 @@
     <div class="row">
         <div class="col-6 px-4">
             <label for="firstName" class="form-label mt-3 fw-semibold">First Name</label>
-            <input type="text" class="form-control" id="firstName">
+            <input type="text" class="form-control" id="firstName" name="firstName" pattern="[A-Za-z]+" required>
         </div>
         <div class="col-6 px-4">
             <label for="lastName" class="form-label mt-3 fw-semibold">Last Name</label>
-            <input type="text" class="form-control" id="lastName">
+            <input type="text" class="form-control" id="lastName" name="lastName" pattern="[A-Za-z]+" required>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-6 px-4">
-            <label for="cityfirstName" class="form-label mt-3 fw-semibold">City</label>
-            <input type="text" class="form-control" id="city">
-        </div>
-        <div class="col-3 px-4">
-            <label for="state" class="form-label mt-3 fw-semibold">State</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Pick a state</option>
-                <option value="1">Barcelona</option>
-                <option value="2">Madrid</option>
-                <option value="3">Paris</option>
-              </select>
-        </div>
-        <div class="col-3 px-4">
-            <label for="postalCode" class="form-label mt-3 fw-semibold">Postal Code</label>
-            <input type="text" class="form-control" id="postalCode">
-        </div>
-    </div>
-
-    <div class="row d-flex justify-content-between">
-        <div class="col-6 px-4 w-25">
-         <label for="weAccept" class="form-label mt-3 fw-semibold">We accept:</label>
-         
-
-         <div class="input-group  bg-secondary justify-content-between p-3 rounded">
-
-            <input type="radio" id="mastercard" name="payment-method" value="mastercard">
-            <i class="fa-brands fa-cc-mastercard"></i>
-
-            <input type="radio" id="visa" name="payment-method" value="visa">
-            <i class="fa-brands fa-cc-visa"></i>
-
-            <input type="radio" id="diners-club" name="payment-method" value="diners-club">
-            <i class="fa-brands fa-cc-diners-club"></i>
-
-            <input type="radio" id="visa" name="payment-method" value="visa">
-            <i class="fa-brands fa-cc-paypal"></i>
-        
-            </div>
-        </div>
-      
-        <div class="col-6 px-4">
-            <label for="floatingTextarea" class="fw-semibold mt-3">Message</label>
-            <textarea class="form-control mt-2" style="height: 100px;" id="floatingTextarea"></textarea>
-            <span class="text-muted fw-semibold small-text " >Add any notes here.</span>
-        </div>
-
-    </div>
-
-        
-            <div class="container d-flex justify-content-end bg-light border-top mt-5 p-3">
-                <input type="submit" class="btn btn-secondary me-1" value="Cancel"/>
-                <input type="submit" class="btn btn-primary" value="Send"/>
-            </div>
-       
- </form>
-</div>
-
-</div> 
-</body>
-</html>
+        <div class="col-6 px-4 mb-3">
+            <label for="city" class="form-label mt-3 fw-semibold">City</label>
+            <input type="text" class="form-control" id="city" name="city" pattern="[A-Za-z]+" required>
